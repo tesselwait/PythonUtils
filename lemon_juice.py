@@ -19,7 +19,7 @@ def num_to_pair(num, width):
   return pair
 for x in range(0, len(message)):
   list.append(random.randint(0, pixels-1))
-  list.sort() # message characters assigned to pixels in order
+list.sort() # message characters assigned to pixels in order
 for pixel in list:
   pair = (num_to_pair(pixel, picture_width))
   char_val = ord(message[list.index(pixel)])-96
