@@ -40,7 +40,7 @@ for pixel in pixelList:
     charAscii = ord(message[pixelList.index(pixel)])
     if 96 < charAscii < 123:
         char_val = charAscii - 96
-    if message[pixelList.index(pixel)]==' ':
+    elif message[pixelList.index(pixel)]==' ':
         char_val = 27
     elif message[pixelList.index(pixel)]=='.':
         char_val = 28
