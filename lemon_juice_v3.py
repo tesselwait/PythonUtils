@@ -37,6 +37,9 @@ for x in range(0, len(message)):
 pixelList.sort() # message characters assigned to pixels in order
 for pixel in pixelList:
     pair = (num_to_pair(pixel, picture_width))
+    charAscii = ord(message[pixelList.index(pixel)])
+    if 96 < charAscii < 123:
+        char_val = charAscii - 96
     if message[pixelList.index(pixel)]==' ':
         char_val = 27
     elif message[pixelList.index(pixel)]=='.':
@@ -55,8 +58,6 @@ for pixel in pixelList:
         char_val = 34
     elif message[pixelList.index(pixel)]=='*':
         char_val = 35
-    else:
-        char_val = ord(message[pixelList.index(pixel)])-96
     r = 10 if (char_val) > 10 else (char_val)
     if char_val > 20:
         g = 10
