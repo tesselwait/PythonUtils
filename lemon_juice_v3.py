@@ -85,12 +85,14 @@ def blacklight(orig, alt):
     if hash(orig) == hash(alt):
         print("Images are identical")
         return 0
+    orig = orig.astype('int16')
+    alt = alt.astype('int16')
     hidden_message = ""
     for m in range(0, len(orig[0])):
         for n in range(0, len(orig)):
-            a = abs(min(alt[n][m][0] - orig[n][m][0], orig[n][m][0] - alt[n][m][0]))
-            b = abs(min(alt[n][m][1] - orig[n][m][1], orig[n][m][1] - alt[n][m][1]))
-            c = abs(min(alt[n][m][2] - orig[n][m][2], orig[n][m][2] - alt[n][m][2]))
+            a = abs(alt[n][m][0] - orig[n][m][0])
+            b = abs(alt[n][m][1] - orig[n][m][1])
+            c = abs(alt[n][m][2] - orig[n][m][2])
             d = a + b + c
             if d != 0:
                 print("Modification at: "+ str(m) + ", " + str(n))
