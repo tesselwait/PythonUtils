@@ -70,7 +70,7 @@ for pixel in pixelList:
         r = -r
     if arr2[pair[0]][pair[1]][1] > 245:
         g = -g
-    if arr2[pair[0]][pair[1]][2] > 241:
+    if arr2[pair[0]][pair[1]][2] > 240:
         b = -b
     arr2[pair[0]][pair[1]][0] += r
     arr2[pair[0]][pair[1]][1] += g
