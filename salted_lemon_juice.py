@@ -14,7 +14,7 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
 #  Program encrypts text from a .txt file with a password and embeds the ciphertext onto a .jpg file using steganography.
-#  Ciphertext is then extracted from the new .jpg file by comparison with original and decrypted.
+#  Ciphertext is then extracted from the new .jpg file by comparison with the original and decrypted.
 
 backend = default_backend()
 iterations = 100_000
