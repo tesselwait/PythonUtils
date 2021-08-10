@@ -77,7 +77,6 @@ token_text = password_encrypt(message.encode(), password)
 #print(token_text)
 #print()
 
-# Hide text in image via rgb adjustments to random pixels
 arr = np.asarray(Image.open("Whiskey_Sour.jpg"))
 arr2 = arr.copy()
 picture_width = len(arr)
