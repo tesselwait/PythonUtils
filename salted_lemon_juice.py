@@ -137,7 +137,7 @@ def blacklight(orig, alt):
             if d != 0:
             #    print("Modification at: "+ str(m) + ", " + str(n))
             #    print("Old: "+str(orig[n][m][0] + orig[n][m][1] + orig[n][m][2])+", New: "+ str(alt[n][m][0] + alt[n][m][1] + alt[n][m][2]))
-                letter = ciphertext_list[d] #str(d)
+                letter = ciphertext_list[d]
                 #print("Difference: " + str(d) + " Letter: " + letter)
             #    print()
                 hidden_ciphertext+=letter
