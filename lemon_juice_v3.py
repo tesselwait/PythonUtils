@@ -76,7 +76,7 @@ for pixel in pixelList:
     arr2[pair[0]][pair[1]][1] += g
     arr2[pair[0]][pair[1]][2] += b
 augment = Image.fromarray(arr2)
-augment.save("augmented_cosmic_looters.jpg")
+augment.save("augmented_cosmic_looters.png")
 
 def hash(img):
     return hashlib.md5(img.tobytes()).hexdigest()
