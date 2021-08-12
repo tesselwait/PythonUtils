@@ -35,7 +35,7 @@ for pixel in list:
   arr2[pair[0]][pair[1]][1] += g # possible on pixel
   arr2[pair[0]][pair[1]][2] += b # values > 245
 augment = Image.fromarray(arr2)
-augment.save("Augmented_Whiskey_Sour.jpg")
+augment.save("Augmented_Whiskey_Sour.png")
 def blacklight(orig, alt):
   hidden_message = ""
   for m in range(0, len(orig[0])):
