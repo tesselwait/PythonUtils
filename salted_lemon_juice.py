@@ -1,7 +1,5 @@
-import sys
 from PIL import Image
 import numpy as np
-import re
 import random
 import hashlib
 from pathlib import Path
@@ -116,7 +114,7 @@ for pixel in pixelList:
     arr2[pair[0]][pair[1]][1] += g
     arr2[pair[0]][pair[1]][2] += b
 augment = Image.fromarray(arr2)
-augment.save("Salted_Whiskey_Sour.jpg")
+augment.save("Salted_Whiskey_Sour.png") # .png works - saving new array as .jpg alters numpy extracted array
 
 def hash(img):
     return hashlib.md5(img.tobytes()).hexdigest()
@@ -143,7 +141,7 @@ def blacklight(orig, alt):
                 hidden_ciphertext+=letter
     #print("Hidden Message: " + hidden_ciphertext)
     return hidden_ciphertext
-hidden_cipher = blacklight(arr, arr2)
+hidden_cipher = blacklight(np.asarray(Image.open("Whiskey_Sour.jpg")), np.asarray(Image.open("Salted_Whiskey_Sour.png")
 print("Extracted Image Cipher String")
 print(type(hidden_cipher))
 print(hidden_cipher)
