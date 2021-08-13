@@ -141,7 +141,7 @@ def blacklight(orig, alt):
                 hidden_ciphertext+=letter
     #print("Hidden Message: " + hidden_ciphertext)
     return hidden_ciphertext
-hidden_cipher = blacklight(np.asarray(Image.open("Whiskey_Sour.jpg")), np.asarray(Image.open("Salted_Whiskey_Sour.png")
+hidden_cipher = blacklight(np.asarray(Image.open("Whiskey_Sour.jpg")), np.asarray(Image.open("Salted_Whiskey_Sour.png")))
 print("Extracted Image Cipher String")
 print(type(hidden_cipher))
 print(hidden_cipher)
