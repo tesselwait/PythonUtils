@@ -93,7 +93,7 @@ def num_to_pair(num, width):
     pair[0] = num - (pair[1]*width)
     return pair
 indexList = list(range(0, pixels-1))
-for x in range(0, len(str(message_string))):
+for x in range(0, len(message_string)):
     pixelList.append(indexList.pop(random.randint(0, len(indexList)-1)))
 pixelList.sort()
 for pixel in pixelList:
