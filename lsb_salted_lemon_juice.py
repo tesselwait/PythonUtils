@@ -81,8 +81,6 @@ picture_width = len(arr)
 picture_height = len(arr[0])
 pixels = picture_width * picture_height
 message_string = token_text.decode('ascii')
-#eq_count = message_string.count('=')
-#message_string = message_string[:-eq_count]
 print("Cipher_String:")
 print(type(message_string))
 print(message_string)
