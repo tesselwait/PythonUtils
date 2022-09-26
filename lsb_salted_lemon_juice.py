@@ -14,6 +14,9 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 #  Program encrypts text from a .txt file with a password and embeds the ciphertext onto a .png file using steganography.
 #  Ciphertext is then extracted from the new .png file by comparison with the original and decrypted.
 
+# The cryptography code was not authored by me. It was taken from a StackOverflow answer by Martijn Pieters.
+# I make no claims about its correctness or the security of the Fernet encryption library.
+#
 backend = default_backend()
 iterations = 100_000
 
@@ -41,6 +44,7 @@ def password_decrypt(token: bytes, password: str) -> bytes:
     iterations = int.from_bytes(iter, 'big')
     key = _derive_key(password.encode(), salt, iterations)
     return Fernet(key).decrypt(token)
+#
 
 ciphertext_dict = {
     'A': 1, 'B': 2, 'C': 3, 'D': 4,
